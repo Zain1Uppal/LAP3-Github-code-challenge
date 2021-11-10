@@ -12,11 +12,7 @@ export const Gitpage = ({ handleSelect }) => {
         const getUserDetails = async () => {
             const my_token = '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'
             try {
-                const { data } = await axios.get(`https://api.github.com/users/${userName}/repos`,{
-                    'headers': {
-                      'Authorization': `token ${my_token}` 
-                    }
-                  })
+                const { data } = await axios.get(`https://api.github.com/users/${userName}/repos`)
                 console.log(data)
                 setUserData(data)
             } catch(err) {

@@ -11,11 +11,7 @@ export const Featured = ( {repoName} ) => {
         const fetchRepo = async () => {
             const my_token = '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'
             try {
-                let { data } = await axios.get(`https://api.github.com/repos/${userName}/${repoName}`,{
-                    'headers': {
-                      'Authorization': `token ${my_token}` 
-                    }
-                  })
+                let { data } = await axios.get(`https://api.github.com/repos/${userName}/${repoName}`)
                 console.log(data)
                 setRepoData(data);
             } catch (err) {
@@ -33,11 +29,7 @@ export const Featured = ( {repoName} ) => {
 
     return (
         <>
-        <form role='userInput' onSubmit={handleSubmit}>
-            <label htmlFor='reponame' >Input your github reponame</label>
-            <input type='text' id='reponame'></input>
-            <input type='submit'></input>
-        </form>
+
         <h1>{repoData.full_name}</h1>
         </>
     )
