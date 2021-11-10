@@ -11,6 +11,7 @@ const config = {
     filename: 'bundle.js',
     publicPath: '/',
   },
+  mode: 'development',
   resolve: {
     modules: [path.resolve('node_modules'), 'node_modules']
   },

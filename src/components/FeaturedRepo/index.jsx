@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import { useSelector, useDispatch } from 'react-redux';
+import './style.css';
 
 export const Featured = ( {repoName} ) => {
     const [featured, setFeatured] = useState();
@@ -29,8 +30,13 @@ export const Featured = ( {repoName} ) => {
 
     return (
         <>
+        <div id="infodiv">
 
-        <h1>{repoData.full_name}</h1>
+        <h1>{repoData.name}</h1>
+        <p>{repoData.description}</p>
+       {repoData.name ? <><a target="_blank" href={repoData.clone_url}>Open this repo in github</a>        <p>Created: {repoData.created_at}</p>
+</> : <h1></h1>} 
+        </div>
         </>
     )
 }

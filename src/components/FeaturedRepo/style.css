@@ -1,0 +1,11 @@
+h1 {
+    display:inherit;
+    position: relative;
+    text-align: left;
+
+}
+
+#infodiv {
+    grid-column: 3;
+    grid-row: 3;
+}
