@@ -1,0 +1,52 @@
+form {
+    display: flex;
+    align-content: center;
+    padding: 2rem;
+    grid-column: 1 / 4;
+    grid-row: 1;
+}
+
+#username {
+    max-height: 1.3rem;
+    min-height: 1.3rem;
+    margin-left: 10px;
+}
+
+#selector {
+    grid-row: 2;
+}
+
+#submitbutton {
+    background-color: blue;
+    font-weight: bolder;
+    color: white;
+    height: 1.6rem;
+    width: 4rem;
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+#submitbutton:hover {
+    border: 2px solid lightblue;
+}
+
+li {
+    text-decoration: none;
+    list-style-type: none;
+    padding: 0.3rem 5px;
+    border: 1px solid black;
+}
+
+li:hover {
+    background-color: lightblue;
+    cursor: pointer;
+}
+
+ul {
+    display: inline-block;
+}
+
+#repodiv {
+    grid-row: 3;
+    grid-column: 1;
+}

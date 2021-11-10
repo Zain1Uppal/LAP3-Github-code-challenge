@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-import { useDispatch } from 'react-redux'
-import { updateUsername } from '../../actions'
+import { useDispatch } from 'react-redux';
+import { updateUsername } from '../../actions';
+import './style.css';
 
 export const Gitpage = ({ handleSelect }) => {
     const [ userName, setUsername ] = useState('')
@@ -33,9 +34,10 @@ export const Gitpage = ({ handleSelect }) => {
         <form role='userInput' onSubmit={handleSubmit}>
             <label htmlFor='username' >Input your github username</label>
             <input type='text' id='username'></input>
-            <input type='submit'></input>
+            <input id="submitbutton" type='submit'></input>
         </form>
-        <div>
+        <div id="repodiv">
+            {userName ? <h3 id="selector">please select a repo</h3> : <h1>Please enter a username</h1> }
             <ul>
                 {
                     userData.map(dt => (
