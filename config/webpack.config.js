@@ -1,3 +1,4 @@
+const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 const ROOT_DIRECTORY = path.join(__dirname, '../');
@@ -19,7 +20,6 @@ const config = {
   plugins: [
     new HtmlWebpackPlugin({
       template: path.join(PUBLIC_DIRECTORY, 'index.html'),
-      favicon: "./src/favicon.png"
     }),
   ],
   module: {
