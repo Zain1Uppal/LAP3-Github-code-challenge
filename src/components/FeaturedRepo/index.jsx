@@ -29,7 +29,6 @@ export const Featured = ( {repoName} ) => {
 
     return (
         <>
-
         <h1>{repoData.full_name}</h1>
         </>
     )
